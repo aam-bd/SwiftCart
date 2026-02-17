@@ -50,8 +50,8 @@
     <h1 class="text-2xl font-bold text-blue-600">SwiftCart</h1>
 
     <ul class="hidden md:flex space-x-8 font-medium">
-      <li><a href="#" class="text-blue-600">Home</a></li>
-      <li><a href="/src/products.html" class="hover:text-blue-600">Products</a></li>
+      <li><a href="./index.html" class="text-blue-600">Home</a></li>
+      <li><a href="./products.html" class="hover:text-blue-600">Products</a></li>
       <li><a href="#" class="hover:text-blue-600">About</a></li>
       <li><a href="#" class="hover:text-blue-600">Contact</a></li>
     </ul>
@@ -203,7 +203,6 @@
             <li><a href="#" class="hover:text-blue-400 transition">Privacy Policy</a></li>
           </ul>
         </div>
-        <!-- newsletter -->
         <div>
           <h4 class="text-white font-semibold text-lg mb-4">SUBSCRIBE TO OUR NEWSLETTER</h4>
           <p class="text-sm mb-3">The latest news, articles, and resources, sent to your inbox weekly.</p>
@@ -213,7 +212,6 @@
           </div>
         </div>
       </div>
-      <!-- bottom copyright + social icons (implied) -->
       <div class="pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
         <p>© 2025 SwiftCart, Inc. All rights reserved.</p>
         <div class="flex space-x-5 mt-4 md:mt-0">
@@ -227,7 +225,6 @@
   </footer>
 
   <script>
-  // Toggle mobile menu
   const menuBtn = document.getElementById('menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
   const menuIcon = menuBtn.querySelector('i');
@@ -235,7 +232,6 @@
   menuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
     
-    // Toggle between menu and close icon
     if (mobileMenu.classList.contains('hidden')) {
       menuIcon.className = 'ri-menu-line';
     } else {
@@ -243,7 +239,7 @@
     }
   });
 
-  // Close menu when clicking on a link (optional)
+  
   document.querySelectorAll('#mobile-menu a').forEach(link => {
     link.addEventListener('click', () => {
       mobileMenu.classList.add('hidden');
