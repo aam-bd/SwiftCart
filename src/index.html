@@ -8,6 +8,37 @@
 
   <!-- Icons -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    /* floating icon effect: half on card, half on background */
+    .float-icon {
+      position: relative;
+      top: -1.2rem;        /* pull icon upward so half overlaps card */
+      left: 1rem;
+      background: white;
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      border: 1px solid #f0f0f0;
+      color: #2563eb;       /* blue-600 */
+      font-size: 1.5rem;
+    }
+    /* ensure card content doesn't hide behind the icon */
+    .card-content {
+      margin-top: -0.8rem;  /* adjust after absolute-ish float */
+    }
+    /* consistent hover transitions */
+    .btn-hover {
+      transition: all 0.2s ease;
+    }
+  </style>
+  <title>SwiftCart</title>
+
+
 </head>
 
 <body class="font-sans text-gray-800">
@@ -20,7 +51,7 @@
 
     <ul class="hidden md:flex space-x-8 font-medium">
       <li><a href="#" class="hover:text-blue-600">Home</a></li>
-      <li><a href="#" class="hover:text-blue-600">Products</a></li>
+      <li><a href="/src/products.html" class="hover:text-blue-600">Products</a></li>
       <li><a href="#" class="hover:text-blue-600">About</a></li>
       <li><a href="#" class="hover:text-blue-600">Contact</a></li>
     </ul>
@@ -34,7 +65,7 @@
 </nav>
 
 <!-- Spacer -->
-<div class="h-20"></div>
+<div class="h-15"></div>
 
 <!-- ================= HERO ================= -->
 <section class="relative h-[500px] bg-cover bg-center" style="background-image:url('./assets/banner-image.png')">
@@ -56,103 +87,132 @@
 </section>
 
 <!-- ================= WHY CHOOSE US ================= -->
-<section class="py-20 bg-gray-50">
-  <div class="max-w-7xl mx-auto px-6 text-center">
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Why Choose Us</h2>
+      <p class="text-lg text-gray-600 mt-3 max-w-2xl mx-auto">We provide the best shopping experience with top-notch services.</p>
 
-    <h2 class="text-3xl font-bold mb-2">Why Choose Us</h2>
-    <p class="text-gray-500 mb-16">We provide the best shopping experience with top-notch services.</p>
-
-    <div class="grid md:grid-cols-4 gap-8">
-
-      <!-- Card -->
-      <div class="relative bg-white p-8 rounded-xl shadow">
-        <div class="absolute -top-6 left-6 bg-blue-600 text-white p-3 rounded-lg">
-          <i class="ri-truck-line text-xl"></i>
+      <!-- feature cards grid (4) with floating icons -->
+      <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- card 1: fast delivery -->
+        <div class="bg-gray-50 rounded-2xl shadow-md hover:shadow-lg transition relative">
+          <div class="float-icon">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <div class="p-6 pt-8 card-content">
+            <h3 class="text-xl font-semibold text-gray-800">Fast Delivery</h3>
+            <p class="text-gray-600 mt-2 text-sm leading-relaxed">Get your orders delivered to your doorstep quickly and efficiently.</p>
+          </div>
         </div>
-        <h3 class="font-semibold mt-6">Fast Delivery</h3>
-        <p class="text-sm text-gray-500 mt-2">Get your orders delivered to your doorstep quickly and efficiently</p>
-      </div>
-
-      <div class="relative bg-white p-8 rounded-xl shadow">
-        <div class="absolute -top-6 left-6 bg-blue-600 text-white p-3 rounded-lg">
-          <i class="ri-headphone-line text-xl"></i>
+        <!-- card 2: 24/7 support -->
+        <div class="bg-gray-50 rounded-2xl shadow-md hover:shadow-lg transition relative">
+          <div class="float-icon">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <div class="p-6 pt-8 card-content">
+            <h3 class="text-xl font-semibold text-gray-800">24/7 Support</h3>
+            <p class="text-gray-600 mt-2 text-sm">Our support team is available around the clock to assist you.</p>
+          </div>
         </div>
-        <h3 class="font-semibold mt-6">24/7 Support</h3>
-        <p class="text-sm text-gray-500 mt-2">Our support team is available around the clock to assist you.</p>
-      </div>
-
-      <div class="relative bg-white p-8 rounded-xl shadow">
-        <div class="absolute -top-6 left-6 bg-blue-600 text-white p-3 rounded-lg">
-          <i class="ri-shield-check-line text-xl"></i>
+        <!-- card 3: secure payment -->
+        <div class="bg-gray-50 rounded-2xl shadow-md hover:shadow-lg transition relative">
+          <div class="float-icon">
+            <i class="fas fa-shield-alt text-2xl"></i>
+          </div>
+          <div class="p-6 pt-8 card-content">
+            <h3 class="text-xl font-semibold text-gray-800">Secure Payment</h3>
+            <p class="text-gray-600 mt-2 text-sm">Experience safe and secure transactions with our encrypted payment systems.</p>
+          </div>
         </div>
-        <h3 class="font-semibold mt-6">Secure Payment</h3>
-        <p class="text-sm text-gray-500 mt-2">Experience safe and secure transactions with our encrypted payment systems.</p>
-      </div>
-
-      <div class="relative bg-white p-8 rounded-xl shadow">
-        <div class="absolute -top-6 left-6 bg-blue-600 text-white p-3 rounded-lg">
-          <i class="ri-refresh-line text-xl"></i>
+        <!-- card 4: easy returns -->
+        <div class="bg-gray-50 rounded-2xl shadow-md hover:shadow-lg transition relative">
+          <div class="float-icon">
+            <i class="fa-solid fa-arrows-rotate"></i>
+          </div>
+          <div class="p-6 pt-8 card-content">
+            <h3 class="text-xl font-semibold text-gray-800">Easy Returns</h3>
+            <p class="text-gray-600 mt-2 text-sm">Not satisfied? Return your products easily within 30 days.</p>
+          </div>
         </div>
-        <h3 class="font-semibold mt-6">Easy Returns</h3>
-        <p class="text-sm text-gray-500 mt-2">Not satisfied? Return your products easily within 30 days.</p>
       </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
 <!-- ================= TRENDING ================= -->
-<section class="py-20">
-  <div class="max-w-7xl mx-auto px-6">
+<section class="py-16 bg-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <h2 class="text-2xl font-bold mb-8">Trending Now</h2>
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center">
+      Trending Now
+    </h2>
 
-    <div id="products" class="grid md:grid-cols-3 gap-8"></div>
+    <p class="text-center text-gray-600 mt-2 mb-12">
+      Top rated picks just for you
+    </p>
 
-  </div>
-</section>
-
-<!-- ================= FOOTER ================= -->
-<footer class="bg-gray-900 text-gray-300 py-12">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
-
-    <div>
-      <h3 class="text-xl font-bold text-white mb-3">SwiftCart</h3>
-      <p class="text-sm">Your one-stop shop for fashion and lifestyle needs.</p>
-    </div>
-
-    <div>
-      <h4 class="text-white mb-3">Quick Links</h4>
-      <ul class="space-y-2 text-sm">
-        <li>Home</li>
-        <li>Products</li>
-        <li>About</li>
-        <li>Contact</li>
-      </ul>
-    </div>
-
-    <div>
-      <h4 class="text-white mb-3">Support</h4>
-      <ul class="space-y-2 text-sm">
-        <li>FAQ</li>
-        <li>Shipping</li>
-        <li>Returns</li>
-        <li>Privacy Policy</li>
-      </ul>
-    </div>
-
-    <div>
-      <h4 class="text-white mb-3">Newsletter</h4>
-      <div class="flex">
-        <input class="p-2 rounded-l w-full text-black" placeholder="Enter your email">
-        <button class="bg-blue-600 px-4 rounded-r text-white">Subscribe</button>
+    <div id="products" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="col-span-full text-center py-10 text-gray-500">
+        Loading trending products...
       </div>
     </div>
 
   </div>
+</section>
 
-  <p class="text-center text-sm mt-10">© 2025 SwiftCart. All rights reserved.</p>
-</footer>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- top footer: quick links + subscribe -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-gray-700">
+        <!-- brand column -->
+        <div class="col-span-1">
+          <h3 class="text-white text-2xl font-bold mb-4">SwiftCart</h3>
+          <p class="text-sm leading-relaxed">Your one-stop shop for all your fashion and lifestyle needs. Quality products, fast delivery, and excellent support.</p>
+        </div>
+        <!-- quick links -->
+        <div>
+          <h4 class="text-white font-semibold text-lg mb-4">QUICK LINKS</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-blue-400 transition">Home</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition">Products</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition">About</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition">Contact</a></li>
+          </ul>
+        </div>
+        <!-- support -->
+        <div>
+          <h4 class="text-white font-semibold text-lg mb-4">SUPPORT</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-blue-400 transition">FAQ</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition">Shipping</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition">Returns</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <!-- newsletter -->
+        <div>
+          <h4 class="text-white font-semibold text-lg mb-4">SUBSCRIBE TO OUR NEWSLETTER</h4>
+          <p class="text-sm mb-3">The latest news, articles, and resources, sent to your inbox weekly.</p>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded-md bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600 flex-1">
+            <button class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-5 py-2 rounded-md transition">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <!-- bottom copyright + social icons (implied) -->
+      <div class="pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+        <p>© 2025 SwiftCart, Inc. All rights reserved.</p>
+        <div class="flex space-x-5 mt-4 md:mt-0">
+          <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>

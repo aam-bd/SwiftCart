@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="./output.css" rel="stylesheet">
+
+<!-- Remix + FontAwesome -->
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a2e0ad3c2b.js" crossorigin="anonymous"></script>
+
+<script defer src="./products.js"></script>
+</head>
+
+<body class="bg-gray-50">
+
+<!-- NAVBAR (reuse yours) -->
+<nav class="bg-white shadow fixed w-full z-50">
+<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between">
+<h1 class="text-2xl font-bold text-blue-600">SwiftCart</h1>
+<ul class="hidden md:flex space-x-8">
+<li>Home</li>
+<li class="text-blue-600 font-semibold">Products</li>
+<li>About</li>
+<li>Contact</li>
+</ul>
+<i class="ri-shopping-cart-line text-2xl"></i>
+</nav>
+
+<div class="h-20"></div>
+
+<!-- ================= CATEGORIES ================= -->
+
+<section class="py-12">
+<div class="max-w-7xl mx-auto px-6 text-center">
+
+<h2 class="text-3xl font-bold mb-6">Our Products</h2>
+
+<div id="categoryButtons" class="flex flex-wrap justify-center gap-3 mb-10">
+<button data-category="all" class="category-btn bg-blue-600 text-white px-5 py-2 rounded-full">All</button>
+<button data-category="electronics" class="category-btn border px-5 py-2 rounded-full">Electronics</button>
+<button data-category="jewelery" class="category-btn border px-5 py-2 rounded-full">Jewellery</button>
+<button data-category="men's clothing" class="category-btn border px-5 py-2 rounded-full">Men's Clothing</button>
+<button data-category="women's clothing" class="category-btn border px-5 py-2 rounded-full">Women's Clothing</button>
+</div>
+
+<!-- PRODUCTS GRID -->
+<div id="allProducts" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+<p class="col-span-full text-gray-500">Loading products...</p>
+</div>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- top footer: quick links + subscribe -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-gray-700">
+        <!-- brand column -->
+        <div class="col-span-1">
+          <h3 class="text-white text-2xl font-bold mb-4">SwiftCart</h3>
+          <p class="text-sm leading-relaxed">Your one-stop shop for all your fashion and lifestyle needs. Quality products, fast delivery, and excellent support.</p>
+        </div>
+        <!-- quick links -->
+        <div>
+          <h4 class="text-white font-semibold text-lg mb-4">QUICK LINKS</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-blue-400 transition">Home</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition">Products</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition">About</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition">Contact</a></li>
+          </ul>
+        </div>
+        <!-- support -->
+        <div>
+          <h4 class="text-white font-semibold text-lg mb-4">SUPPORT</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-blue-400 transition">FAQ</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition">Shipping</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition">Returns</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <!-- newsletter -->
+        <div>
+          <h4 class="text-white font-semibold text-lg mb-4">SUBSCRIBE TO OUR NEWSLETTER</h4>
+          <p class="text-sm mb-3">The latest news, articles, and resources, sent to your inbox weekly.</p>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded-md bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600 flex-1">
+            <button class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-5 py-2 rounded-md transition">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <!-- bottom copyright + social icons (implied) -->
+      <div class="pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+        <p>© 2025 SwiftCart, Inc. All rights reserved.</p>
+        <div class="flex space-x-5 mt-4 md:mt-0">
+          <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
