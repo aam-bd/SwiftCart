@@ -14,17 +14,24 @@
 
 <body class="bg-gray-50">
 
-<!-- NAVBAR (reuse yours) -->
 <nav class="bg-white shadow fixed w-full z-50">
-<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between">
-<h1 class="text-2xl font-bold text-blue-600">SwiftCart</h1>
-<ul class="hidden md:flex space-x-8">
-<li>Home</li>
-<li class="text-blue-600 font-semibold">Products</li>
-<li>About</li>
-<li>Contact</li>
-</ul>
-<i class="ri-shopping-cart-line text-2xl"></i>
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <h1 class="text-2xl font-bold text-blue-600">SwiftCart</h1>
+
+    <ul class="hidden md:flex space-x-8 font-medium">
+      <li><a href="/src/index.html" class="hover:text-blue-600">Home</a></li>
+      <li><a href="/src/products.html" class="text-blue-600">Products</a></li>
+      <li><a href="#" class="hover:text-blue-600">About</a></li>
+      <li><a href="#" class="hover:text-blue-600">Contact</a></li>
+    </ul>
+
+    <div class="relative">
+      <i class="ri-shopping-cart-line text-2xl"></i>
+      <span class="absolute -top-2 -right-2 bg-blue-600 text-white text-xs rounded-full px-1">0</span>
+    </div>
+
+  </div>
 </nav>
 
 <div class="h-20"></div>
